@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "db5c9c8f-b229-4d92-b773-622e7e8a1340",
+		"name": "Baupal Coding Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6920093"
+	},
+	"item": [
+		{
+			"name": "forms",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "submissions",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post submission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"questionId\":\"double-glazed\",\"content\":\"yes\"},\n{\"questionId\":\"building-size\",\"content\":\"70\"},\n{\"questionId\":\"boiler-type\",\"content\":\"gas\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/submissions",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"submissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post submission bad shape Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"questionId\":\"double-glazed\",\"content\":\"yes\"},\n{\"questionId\":\"building-size\",\"content\":\"70\"},\n{\"questionId\":\"boiler-type\",\"content\":\"gas\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/submissions",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"submissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post submission bad shape",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"wrongStructure\":[{\"questionId\":\"double-glazed\",\"content\":\"yes\"},\n{\"questionId\":\"building-size\",\"conttent\":\"70\"},\n{\"questionId\":\"boiler-type\",\"content\":\"gas\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/submissions",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"submissions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
